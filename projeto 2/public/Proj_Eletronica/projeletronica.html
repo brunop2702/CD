@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+  <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js" >
+  </script>
+
+  <script>
+  versao = "B"
+  projeto = "AmpOp"
+
+  </script>
+  <script src="../scripts/main.js"></script>
+  <script>
+
+    function verify(){
+
+      // definir critério se usuário terminou
+
+      var ok = 0;
+
+      if (document.getElementById("ampop").checked == true){
+        ok = 1;
+
+      }
+
+
+      if (ok == 1){
+        // se terminou, gravar tempo final
+        // redirecionar para página de agradecimentos
+        envia("final", id_pessoa, Date.now(), versao, projeto);
+        window.location.replace("agradecimento.html");
+      } else {
+        alert("Você selecionou o projeto errado! Tente Novamente");
+      }
+
+
+    }
+
+
+    </script>
+		<meta charset='utf-8'>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+    	<link rel="stylesheet" type="text/css" href="../css/estilo1.css">                             <!-- KICKSTART -->
+		<link rel="stylesheet" type="text/css" href="../css/kickstart.css" media="all" />
+		<title>Projetos de Eletrônica</title>
+	</head>
+
+		<nav>
+			<div class="cores"><a href="../Site.html"><h1>Portfólio Grupo 2</h1></a></div>
+		</nav>
+	
+	<body>
+	<script src="client.min.js"></script>
+      <script>
+      
+        var client = new ClientJS();
+        var id_pessoa = client.getFingerprint();
+
+      </script> 
+			<a href="../Site.html"><p>Inicio</a><b>>Projetos de Eletrônica</b></p>
+			
+			<h2>Projetos de Eletrônica</h2>
+			<section class="tipo1 pontilhado"><h4>Descrição:</h4>
+			<p>Nesta aba, selecionamos todos os projetos que envolvem algum tipo de circuito elétrico, arduino, componentes eletricos e etc.</p></section>
+	    	
+	    	<br>
+	    	<br>
+	   
+	    <div class="lista">
+			<ul>
+
+				<li><input type="radio" name="projeto" id="chuveiro"> <a href='#' > Sistema de aquecimento de um chuveiro elétrico </a></li>
+				<li><input type="radio" name="projeto" id="metereologica"> <a href='#'>Estação metereológica</a></li>
+				<li><input type="radio" name="projeto" id="barata"> <a href='#'>Barata elétrica</a></li>
+				<li><input type="radio" name="projeto" id="ampop"> <a href='#'>Circuito eletrônico com Amplificador Operacional </a></li>
+				<li><input type="radio" name="projeto" id="petroleo"> <a href='#'>Analogia eletrica/hidráulica de rede de distribuição de petróleo</a></li>
+				<li><input type="radio" name="projeto" id="pwm"> <a href='#'>Acionamento PWM com eletrônica Analógica ou filtro</a></li>
+
+			</ul>
+
+			<ul>
+         		<li><button onclick="verify();">Achei!</button></li>
+        	</ul>
+		</div>
+		
+			<img class="imagem" src="../Ibagens/Estação-protoboard.png" alt="Mecatronica" >
+			<img class="imagem" src="../Ibagens/mecatro.jpg" alt="Mecanica" >
+	</body>
+	<footer>
+	</Br>
+		</Br>
+		<div class="cores">
+			<p style="float: right; color:white">sobre mim</p>
+			<div class="center">
+			<a href="https://www.instagram.com/insperedu/"><img class="left" src="../Imagens Importantes/instagram-logo.png"/></a>
+			<a href="https://www.facebook.com/insper"><img class="left" src="../Imagens Importantes/facebook-logo.png"/></a>
+			<img class="left" src="../Imagens Importantes/envelope.png"/>
+			<a href="http://www.insper.edu.br/"><img class="container" src="../Imagens Importantes/logo-insper.png"/></a>
+			<a href="../SobreMim/sobremim.html"><img class="right" src="../Imagens Importantes/man-user.png"/></a>
+			</div>
+			
+		</div>
+	</footer>
+</html>

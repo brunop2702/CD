@@ -1,0 +1,6 @@
+#073763 - Cor das barras 
+
+#ABC8FF - Cor do fundo e letra do título 
+
+
+Fonte: Droid serif

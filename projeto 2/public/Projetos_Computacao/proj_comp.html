@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+  <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js" >
+  </script>
+
+  <script>
+  versao = "B"
+  Projeto = "App"
+
+  </script>
+
+  <script src="../scripts/main.js"></script>
+<script>
+
+    function verify(){
+
+      // definir critério se usuário terminou
+
+      var ok = 0;
+
+      if (document.getElementById("app").checked == true){
+        ok = 1;
+
+      }
+
+
+      if (ok == 1){
+        // se terminou, gravar tempo final
+        // redirecionar para página de agradecimentos
+        envia("final", id_pessoa, Date.now(), versao, Projeto);
+        window.location.replace("agradecimento.html");
+      } 
+
+      else {
+        alert("Você selecionou o projeto errado! Tente Novamente");
+      }
+
+
+    }
+
+
+    </script>
+		<meta charset='utf-8'>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	    <link rel="stylesheet" type="text/css" href="../css/estilo1.css">
+	    <link rel="stylesheet" type="text/css" href="../css/kickstart.css" media="all" />
+		<title>Projetos de Computação</title>
+	</head>
+
+		<nav>
+			<div class="cores"><a href="../Site.html"><h1>Portifólio Grupo 2</h1></a></div>
+		</nav>
+
+	<body>
+	<script src="client.min.js"></script>
+      <script>
+      
+        var client = new ClientJS();
+        var id_pessoa = client.getFingerprint();
+
+      </script> 
+			<a href="../Site.html"><p>Inicio</a><b>>Projetos de Computação</b></p>
+
+			<h2>Projetos de computação</h2>
+			<section class="tipo1 pontilhado"><h4>Descrição:</h4>
+			<p>Aqui reunimos todos os porjetos que envolveram alguma linguagem de programação, ou alguma lógica computacional. A maioria dos projetos aqui envolveram python, e alguns deles são diferentes para cada pessoa visto que cada aluno era de um grupo e os trabalhos foram diferentes, como o Projeto Final e o Protótipo de Aplicativos.</p></section>
+
+			<br>
+			<br>
+	        
+	    <div class="lista">
+	        <ul>
+	        	<li><a href="#"><input type="radio" name="projeto" id="website"> Projeto de website</a></li> <br>
+	        	<li><a href="#"><input type="radio" name="projeto" id="app"> Protótipo de aplicativos</a></li> <br>
+	        	<li><a href="#"><input type="radio" name="projeto" id="finaldessoft"> Projeto Final de Design de Software</a></li> <br>
+	        	<li><a href="#"><input type="radio" name="projeto" id="conceito"> Calculo de Conceito</a></li> <br>
+	        	<li><a href="#"><input type="radio" name="projeto" id="velha"> Jogo da Velha</a></li> <br>
+	        	<li><a href="#"><input type="radio" name="projeto" id="crud"> CRUD</a></li> <br>
+	        	<li><a href="#"><input type="radio" name="projeto" id="analise"> Análise Exploratória</a></li> <br>
+	        	<li><a href="#"><input type="radio" name="projeto" id="interfaces"> Comparação de Interfaces</a></li> <br>
+	        	<li><a href="#"><input type="radio" name="projeto" id="modeloteorico"> Ajuste de modelo teórico</a></li> <br>
+	        	<li><a href="#"><input type="radio" name="projeto" id="limetecentral"> Teorema do Limite Central</a></li> <br>
+			</ul>
+			<ul>
+         		<li><button onclick="verify();">Achei!</button></li>
+        	</ul>
+		</div>
+		<div class="conj_imagem">
+			<img class="imagem" src="../Ibagens/jogo_da_velha.jpg" alt="Jogo da Velha" >
+			<img class="imagem" src="../Ibagens/projeto_website.jpg" alt="Projeto Website" >
+		</div>
+	</body>
+	<footer>
+			</Br>
+			</Br>
+			<div class="cores">
+				<p style="float: right; color:white">sobre mim</p>
+				<div class="center">
+				<a href="https://www.instagram.com/insperedu/"><img class="left" src="../Imagens Importantes/instagram-logo.png"/></a>
+				<a href="https://www.facebook.com/insper"><img class="left" src="../Imagens Importantes/facebook-logo.png"/></a>
+				<img class="left" src="../Imagens Importantes/envelope.png"/>
+				<a href="http://www.insper.edu.br/"><img class="container" src="../Imagens Importantes/logo-insper.png"/></a>
+				<a href="../SobreMim/sobremim.html"><img class="right" src="../Imagens Importantes/man-user.png"/></a>
+				</div>
+				
+			</div>
+	</footer>
+</html>
